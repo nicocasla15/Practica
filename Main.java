@@ -34,6 +34,5 @@ public class Main {
         System.out.println(RegistroAutomotor.getTotalMultas());
         System.out.println(RegistroAutomotor.getVehiculosConMultas());
         System.out.println(RegistroAutomotor.getMayorMulta());
-
     }
 }        
