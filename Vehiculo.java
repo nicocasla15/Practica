@@ -8,7 +8,7 @@ public abstract class Vehiculo {
     private double precio;
     protected int velocidad = 0;
     private String patente;
-    private int multa;
+    protected int multa;
 
 
     public Vehiculo() {
@@ -90,8 +90,8 @@ public abstract class Vehiculo {
         this.patente = patente;
     }
 
-    public int getMulta(){
-        return multa;
+    public String getMulta(){
+        return "La multa es de: "+multa;
     }
 
     public void setMulta(int multa) {

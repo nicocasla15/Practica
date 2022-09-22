@@ -1,15 +1,13 @@
 package Nada;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class RegistroAutomotor {
     private static List<String> vehiculosRegistrados = new ArrayList<>();
     private static List<String> vehiculosConMultas = new ArrayList<>();
-    private static int contadorMultas = 0;
-    private static int contadorVehiculosConMultas = 0;
-    private static int mayorMulta = 0;
-    
+    private static List<Integer> contadorMultas = new ArrayList<>();
     public RegistroAutomotor(){
         super();
     }
@@ -26,23 +24,27 @@ public class RegistroAutomotor {
     public static void setMulta(Vehiculo anyVehicle, int multa) {
         anyVehicle.setMulta(multa);
         vehiculosConMultas.add(""+anyVehicle);
-        contadorMultas += multa;
-        contadorVehiculosConMultas += 1;
-        if(multa > mayorMulta){
-            mayorMulta = multa;
-        }
+        contadorMultas.add(multa);
+    }
+
+    public static void pagarMulta(Vehiculo anyVehicle, int montoPagar){
+        anyVehicle.setMulta(anyVehicle.multa-montoPagar);
+        System.out.println("Se completó el pago de la multa");
+        contadorMultas.remove(Integer.valueOf(montoPagar));
     }
 
     public static int getTotalMultas(){
-        return contadorMultas;
+        int tot = contadorMultas.stream().mapToInt(Integer::intValue).sum();
+        return tot;
     }
 
     public static String getVehiculosConMultas(){
-        return "Los vehiculos con multas son: "+contadorVehiculosConMultas+""+vehiculosConMultas;
+        return "Los vehiculos con multas son: "+vehiculosConMultas.size()+""+vehiculosConMultas;
     }
 
     public static String getMayorMulta() {
-        return "La multa de mayor monto es: " + mayorMulta;
+        return "La multa de mayor monto es: " + Collections.max(contadorMultas);
     }
     
+
 }
