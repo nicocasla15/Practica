@@ -5,8 +5,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class RegistroAutomotor {
-    private static List<String> vehiculosRegistrados = new ArrayList<>();
-    private static List<String> vehiculosConMultas = new ArrayList<>();
+    private static List<Vehiculo> vehiculosRegistrados = new ArrayList<>();
+    private static List<Vehiculo> vehiculosConMultas = new ArrayList<>();
     private static List<Integer> contadorMultas = new ArrayList<>();
     public RegistroAutomotor(){
         super();
@@ -18,12 +18,12 @@ public class RegistroAutomotor {
 
     public static void setPatente(Vehiculo anyVehicle, String patente) {
        anyVehicle.setPatente(patente);
-       vehiculosRegistrados.add(""+anyVehicle);
+       vehiculosRegistrados.add(anyVehicle);
     }
 
     public static void setMulta(Vehiculo anyVehicle, int multa) {
         anyVehicle.setMulta(multa);
-        vehiculosConMultas.add(""+anyVehicle);
+        vehiculosConMultas.add(anyVehicle);
         contadorMultas.add(multa);
     }
 
