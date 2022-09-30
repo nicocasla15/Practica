@@ -7,7 +7,8 @@ def stringCompression(string):
       sec = string[i-1]
 
       if prim != sec:
-        s += prim  
+        s += prim
+          
     return s   
 
 string = "aaabaabbbccc"
