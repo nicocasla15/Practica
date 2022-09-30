@@ -1,15 +1,21 @@
 def stringCompression(string):
-    count = 0
+    count = 1
     s = ""
     
     for i in range(len(string)):
-      prim = string[i]
-      sec = string[i-1]
+        if i == 0:
+          s += string[i]
+        elif count > 1 and string[i] != string[i-1]:
+          s += str(count)
+          s += string[i]
+          count = 1
+        elif string[i] != string[i-1]:
+          s += string[i]
+        else:
+          count += 1
+    if count > 1:
+          s+= str(count)
+    return s
 
-      if prim != sec:
-        s += prim
-          
-    return s   
-
-string = "aaabaabbbccc"
+string = "abbcccdeefggghiiaa"
 print(stringCompression(string))
