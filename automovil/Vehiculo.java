@@ -1,4 +1,4 @@
-package Nada;
+package automovil;
 
 public abstract class Vehiculo {
     private String marca;

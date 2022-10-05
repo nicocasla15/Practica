@@ -1,4 +1,4 @@
-package Nada;
+package automovil;
 
 public class Moto extends Vehiculo{
     private static int descuento = 5000;

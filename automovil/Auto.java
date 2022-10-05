@@ -1,4 +1,4 @@
-package Nada;
+package automovil;
 
 public class Auto extends Vehiculo {
     private int puertas;
