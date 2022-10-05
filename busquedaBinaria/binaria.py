@@ -1,19 +1,19 @@
 def busquedaBinaria(num):
     cont = 0
-    l = 0
-    r = len(num) -1
+    izquierda = 0
+    derecha = len(num) -1
     
-    while l <= r:
-        m = int((l+r)/2)
+    while izquierda <= derecha:
+        medio = int((izquierda+derecha)/2)
         cont +=1
         
-        if num[m] < numABuscar:
-            l = m+1
-        elif num[m] > numABuscar:
-            r = m-1
-        elif num[m] == numABuscar:
+        if num[medio] < numABuscar:
+            izquierda = medio+1
+        elif num[medio] > numABuscar:
+            derecha = medio-1
+        elif num[medio] == numABuscar:
             print(cont)
-            return m
+            return medio
 
 
 def busquedaExhaustiva(num):
