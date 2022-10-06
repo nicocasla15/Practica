@@ -27,7 +27,7 @@ public class binaria {
        
     public static void main(String[] args) {
         int num[] = {1, 3, 4, 5, 9, 48, 52, 66};
-        busqBinaria(num);
+        // busqBinaria(num);
         System.out.println(busqBinaria(num));
     }
 

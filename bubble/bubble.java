@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class bubble {
     
-    private static void burbuja(int[] numeros) {
+    private static int[] burbuja(int[] numeros) {
         for (int i = 0; i < numeros.length; i++) {
             for (int j = 0; j < numeros.length - 1; j++) {
                 if (numeros[j] > numeros[j+1]) {
@@ -14,6 +14,7 @@ public class bubble {
                 }
             }
         }
+        return numeros;
     }
     public static void main(String[] args) {
         int numeros[] = {10, 3, 7, 4, 5, 1, 9, 8, 2, 6};
