@@ -1,27 +1,23 @@
 package filterElements;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class filterElements {
     
     public static List<Integer> filterEle(int n, int k, int[] a) {  
         List<Integer> newA = new ArrayList<Integer>();
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - 1; j++) {
-                if (a[j] > a[j+1]) {
-                    int numero = a[j];
-                    a[j] = a[j+1];
-                    a[j+1] = numero;
-                }
-            }
-        }
-        System.out.println(Arrays.toString(a));
+        
         for(int i = 0; i < n-1; i++){
-            if(a[i] == a[i+1]){
-                newA.add(a[i]);
+            for(int j = 1; j < n-2; j++){
+                if(a[i] == a[j]){
+                    if(newA.contains(a[i])){
+                        i += 1;
+                    }
+                    else{
+                        newA.add(a[i]); 
+                    }
+                }
             }
         }
         return newA;
