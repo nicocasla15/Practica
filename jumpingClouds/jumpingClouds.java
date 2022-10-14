@@ -25,9 +25,12 @@ public class jumpingClouds {
     public static void main(String[] args){
         List<Integer> c = new ArrayList<Integer>();
         c.add(0);
+        c.add(0);
+        c.add(0);
+        c.add(0);
         c.add(1);
         c.add(0);
-        int n = 3;
+        int n = 6;
         System.out.println(jumpingInClouds(c, n));
     }
 }
