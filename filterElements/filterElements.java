@@ -9,16 +9,16 @@ public class filterElements {
         List<Integer> newA = new ArrayList<Integer>();
         
         for(int i = 0; i < n; i++){
+            int cont = 1;
             for(int j = 0; j < n-i; j++){
                 if(a[i] == a[j+1+i]){
-                    if(newA.contains(a[i])){
-                        j += 0;
-                        break;
-                    }
-                    else{
-                        newA.add(a[i]);
-                        break;
-                    }
+                   cont += 1;
+                   if(newA.contains(a[i])){
+                    break;
+                   }
+                   else if(cont >= k){
+                    newA.add(a[i]);
+                   }
                 }
             }
         }
@@ -27,8 +27,8 @@ public class filterElements {
 
     public static void main(String[] args) {
         int n = 9;
-        int k = 2;
-        int[] a = {4,5,2,5,4,3,4,1,3,4};
+        int k = 3;
+        int[] a = {4,5,2,5,1,3,1,1,3,4};
         System.out.println(filterEle(n,k,a));
     }
 }
