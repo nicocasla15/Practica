@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 
-public class arrayList<E> {
+public class arrayList {
     
     private static int defaultCapacity = 10;
     private static Object[] emptyData = {};
@@ -26,22 +26,8 @@ public class arrayList<E> {
                                                initialCapacity);
         }
     }
-
-    public arrayList(Collection<? extends E> c) {
-        Object[] a = c.toArray();
-        if ((size = a.length) != 0) {
-            if (c.getClass() == ArrayList.class) {
-                elementData = a;
-            } else {
-                elementData = Arrays.copyOf(a, size, Object[].class);
-            }
-        } else {
-            elementData = emptyData;
-        }
-    }
-
-    public void add(int index, E element) {
-        
+    public void add(int index) {
+        int cont = 1;
         
     }
 }
