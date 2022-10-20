@@ -1,34 +1,32 @@
 package arrayList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-
 public class arrayList {
     
     private static int defaultCapacity = 10;
-    private static Object[] emptyData = {};
-    private static Object[] emptyDefaultData = {};
-    transient Object[] elementData;
-    private int size;
+    private static int[] array = {defaultCapacity};
+    int size = 0;
+    int cont = 0;
 
     public arrayList(){
-        this.elementData = emptyDefaultData;
+        super();
     }
 
-    public arrayList(int initialCapacity) {
-        if (initialCapacity > 0) {
-            this.elementData = new Object[initialCapacity];
-        } else if (initialCapacity == 0) {
-            this.elementData = emptyData;
-        } else {
-            throw new IllegalArgumentException("Illegal Capacity: "+
-                                               initialCapacity);
+    public void add(int index,int element) {
+        array[index] += element;
+        cont += 1;
+        if(cont == 1){
+            size += 1;
         }
     }
-    public void add(int index) {
-        int cont = 1;
-        
+
+    public int[] getArray(){
+        return array;
+    }
+
+    public static void main(String[] args){
+        arrayList arr = new arrayList();
+        arr.add(0,7);
+        System.out.println(arr.getArray());
     }
 }
 
