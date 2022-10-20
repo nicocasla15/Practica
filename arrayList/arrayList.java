@@ -1,3 +1,5 @@
+package arrayList;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -40,7 +42,7 @@ public class arrayList<E> {
 
     public void add(int index, E element) {
         
-
+        
     }
 }
 
