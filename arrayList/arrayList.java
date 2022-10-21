@@ -21,7 +21,10 @@ public class arrayList {
                 size += 1;
             }
         }
+    }
 
+    public int getSize(){
+        return size;
     }
 
     public int[] getArray(){
@@ -31,7 +34,8 @@ public class arrayList {
     public static void main(String[] args){
         arrayList arr = new arrayList();
         arr.add(0,7);
-        arr.add(5, 6);
+        arr.add(1, 6);
+        System.out.println(arr.getSize());
         System.out.println(Arrays.toString(arr.getArray()));
     }
 }
