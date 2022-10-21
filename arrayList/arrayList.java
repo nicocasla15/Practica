@@ -1,3 +1,4 @@
+
 package arrayList;
 
 import java.util.Arrays;
@@ -6,6 +7,7 @@ public class arrayList {
     
     private static int defaultCapacity = 10;
     private static int[] array = new int[defaultCapacity];
+    private static int[] newArray;
     int size = 0;
     int cont = 0;
 
@@ -13,14 +15,22 @@ public class arrayList {
         super();
     }
 
-    public void add(int index,int element) {
+    public void add(int element) {
         if(array.length <= defaultCapacity){
-            array[index] += element;    
+            array[cont] += element;    
             cont += 1;
             if(cont >= 1){
                 size += 1;
             }
+            newArray = new int[size];
+            for(int i = 0; i<size;i++){
+                newArray[i] += array[i];
+            }
         }
+    }
+
+    public int get(int index){
+        return newArray[index];
     }
 
     public int getSize(){
@@ -28,15 +38,16 @@ public class arrayList {
     }
 
     public int[] getArray(){
-        return array;
+        return newArray;
     }
 
     public static void main(String[] args){
         arrayList arr = new arrayList();
-        arr.add(0,7);
-        arr.add(1, 6);
-        System.out.println(arr.getSize());
+        arr.add(7);
+        arr.add(6);
         System.out.println(Arrays.toString(arr.getArray()));
+        System.out.println(arr.get(0));
+        System.out.println(arr.getSize());
     }
 }
 
