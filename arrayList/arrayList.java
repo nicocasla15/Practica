@@ -41,6 +41,24 @@ public class arrayList {
         return newArray;
     }
 
+    public boolean contains(int element){
+        boolean a = false;
+        boolean b;
+        boolean c;
+        for(int i = 0; i<newArray.length;i++){
+            if(newArray[i] == element){
+                b = true;
+                a = b;
+                break;
+            }
+            else{
+                c = false;
+                a = c;
+            }
+        }
+        return a;
+    }
+
     public static void main(String[] args){
         arrayList arr = new arrayList();
         arr.add(7);
@@ -48,6 +66,7 @@ public class arrayList {
         System.out.println(Arrays.toString(arr.getArray()));
         System.out.println(arr.get(0));
         System.out.println(arr.getSize());
+        System.out.println(arr.contains(5));
     }
 }
 
