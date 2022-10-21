@@ -66,7 +66,7 @@ public class arrayList {
         System.out.println(Arrays.toString(arr.getArray()));
         System.out.println(arr.get(0));
         System.out.println(arr.getSize());
-        System.out.println(arr.contains(5));
+        System.out.println(arr.contains(7));
     }
 }
 
