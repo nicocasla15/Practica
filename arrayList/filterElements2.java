@@ -1,5 +1,7 @@
 package arrayList;
 
+import java.util.Arrays;
+
 public class filterElements2 extends arrayList{
 
     public class filterElements {
@@ -21,7 +23,7 @@ public class filterElements2 extends arrayList{
                     }
                 }
             }
-            System.out.println(newA.getArray());
+            System.out.println(Arrays.toString(newA.getArray()));
         }
     
         public static void main(String[] args) {

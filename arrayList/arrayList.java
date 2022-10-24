@@ -13,6 +13,7 @@ public class arrayList {
 
     public arrayList(){
         super();
+        newArray = new int[size];
     }
 
     public void add(int element) {
