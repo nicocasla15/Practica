@@ -2,12 +2,12 @@ package arrayList;
 
 import java.util.Arrays;
 
-public class filterElements2 extends arrayList{
+public class filterElements2 extends NicoArrayList{
 
     public class filterElements {
     
         public static void filterEle(int n, int k, int[] a) {  
-            arrayList newA = new arrayList();
+            NicoArrayList newA = new NicoArrayList();
             
             for(int i = 0; i < n; i++){
                 int cont = 1;

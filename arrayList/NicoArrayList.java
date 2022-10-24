@@ -3,7 +3,7 @@ package arrayList;
 
 import java.util.Arrays;
 
-public class arrayList {
+public class NicoArrayList {
     
     private static int defaultCapacity = 10;
     private static int[] array = new int[defaultCapacity];
@@ -11,7 +11,7 @@ public class arrayList {
     int size = 0;
     int cont = 0;
 
-    public arrayList(){
+    public NicoArrayList(){
         super();
         newArray = new int[size];
     }
@@ -61,7 +61,7 @@ public class arrayList {
     }
 
     public static void main(String[] args){
-        arrayList arr = new arrayList();
+        arrayList arr = new NicoArrayList();
         arr.add(7);
         arr.add(6);
         System.out.println(Arrays.toString(arr.getArray()));
