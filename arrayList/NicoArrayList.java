@@ -61,7 +61,7 @@ public class NicoArrayList {
     }
 
     public static void main(String[] args){
-        arrayList arr = new NicoArrayList();
+        NicoArrayList arr = new NicoArrayList();
         arr.add(7);
         arr.add(6);
         System.out.println(Arrays.toString(arr.getArray()));
