@@ -1,7 +1,5 @@
 package arrayList;
 
-import java.util.Arrays;
-
 public class filterElements2 extends NicoArrayList{
     
     public static void filterEle(int n, int k, int[] a) {  
@@ -21,13 +19,13 @@ public class filterElements2 extends NicoArrayList{
                 }
             }
         }
-        System.out.println(Arrays.toString(newA.getArray()));
+        System.out.println(newA.toString());
     }
 
     public static void main(String[] args) {
         int n = 9;
         int k = 3;
-        int[] a = {4,5,2,5,1,3,1,1,3,4};
+        int[] a = {4,5,2,5,4,3,1,1,3,4};
         filterEle(n,k,a);
     }
       

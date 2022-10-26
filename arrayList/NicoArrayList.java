@@ -6,48 +6,44 @@ import java.util.Arrays;
 public class NicoArrayList {
     
     private static int defaultCapacity = 10;
-    private static int[] array = new int[defaultCapacity];
-    private static int[] newArray;
+    private static int[] array;
     int size = 0;
     int cont = 0;
 
     public NicoArrayList(){
         super();
-        newArray = new int[size];
+        array = new int[defaultCapacity];
     }
 
     public void add(int element) {
         if(array.length <= defaultCapacity){
-            array[cont] += element;    
-            cont += 1;
-            if(cont >= 1){
-                size += 1;
-            }
-            newArray = new int[size];
-            for(int i = 0; i<size;i++){
-                newArray[i] += array[i];
-            }
+            array[size] += element;    
+            size += 1;
         }
     }
 
+    public String toString(){
+        int[] arr = new int[size];
+        for(int i = 0; i<size;i++){
+            arr[i] += array[i];
+        }
+        return ""+Arrays.toString(arr);
+    }
+
     public int get(int index){
-        return newArray[index];
+        return array[index];
     }
 
     public int getSize(){
         return size;
     }
 
-    public int[] getArray(){
-        return newArray;
-    }
-
     public boolean contains(int element){
         boolean a = false;
         boolean b;
         boolean c;
-        for(int i = 0; i<newArray.length;i++){
-            if(newArray[i] == element){
+        for(int i = 0; i<array.length;i++){
+            if(array[i] == element){
                 b = true;
                 a = b;
                 break;
@@ -64,7 +60,7 @@ public class NicoArrayList {
         NicoArrayList arr = new NicoArrayList();
         arr.add(7);
         arr.add(6);
-        System.out.println(Arrays.toString(arr.getArray()));
+        System.out.println(arr.toString());
         System.out.println(arr.get(0));
         System.out.println(arr.getSize());
         System.out.println(arr.contains(7));

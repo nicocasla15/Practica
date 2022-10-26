@@ -16,7 +16,7 @@ public class NicoLinkedList {
     }
 
     public void add(int element) {
-        
+
     }
 
     public static void main(String[] args){
