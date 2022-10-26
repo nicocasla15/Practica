@@ -4,22 +4,27 @@ import java.util.Arrays;
 
 public class NicoLinkedList {
 
-    private static int[] array;
+    Nodo root = null;
     int size = 0;
     int cont = 0;
 
     public NicoLinkedList(){
         super();
-        array = new int[3];
     }
 
-    public void add(int nod2) {
-        array[cont] = nod2;
-        cont += 1;
+    public void add(Nodo n1) {
+        int puntero = 0;
+        
+        
+        if(root == null){
+            root = n1;
+            puntero = n1.setPuntero(n2);
+        }
+        size += 1;
     }
 
     public String toString() {
-        return ""+Arrays.toString(array);
+        return ""+Arrays.toString();
     }
 
     public static void main(String[] args){
