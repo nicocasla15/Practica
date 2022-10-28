@@ -12,6 +12,7 @@ public class NicoLinkedList {
     }
 
     public void add(int n) {
+        size++;
         if(root == null){
             root = new Nodo(n);
             fin = root;
@@ -23,11 +24,19 @@ public class NicoLinkedList {
         
     }
 
+    public int Size(){
+        return size;
+    }
+
+    public int Get(Nodo n){
+        return n.elemento;
+    }
+
     public void Lista() {
-        Nodo nod = root;
-        while(nod!=null){
-            System.out.print(nod.elemento+", ");
-            nod = nod.puntero;
+        Nodo nodo = root;
+        while(nodo != null){
+            System.out.print(nodo.elemento+" ");
+            nodo = nodo.puntero;
         }
     }
 
@@ -38,5 +47,7 @@ public class NicoLinkedList {
         arr.add(22);
         arr.add(87);
         arr.Lista();
+        System.out.println("\n"+arr.Size());
+        System.out.println(arr.Get());
     }
 }
