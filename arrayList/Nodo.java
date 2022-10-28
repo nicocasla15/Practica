@@ -1,8 +1,8 @@
 package arrayList;
 
 public class Nodo {
-    private Nodo puntero;
-    private int elemento;
+    Nodo puntero;
+    int elemento;
 
     public Nodo(int n) {
         setPuntero(null);
