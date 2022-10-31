@@ -37,6 +37,20 @@ public class NicoLinkedList {
         return nodo.getElemento();
     }
 
+    public boolean contains(int elemento){
+        boolean a = false;
+        int contador = 0;
+        Nodo nodo = root;
+        while(contador<size){
+            if(nodo.getElemento() == elemento){
+                a = true;
+            }
+            nodo = nodo.getPuntero();
+            contador++;
+        }
+        return a;
+    }
+
     public void Lista() {
         Nodo nodo = root;
         while(nodo != null){
@@ -49,11 +63,12 @@ public class NicoLinkedList {
         NicoLinkedList arr = new NicoLinkedList();
         arr.add(1);
         arr.add(9);
-        arr.add(65);
+        arr.add(63);
         arr.add(22);
         arr.add(87);
         arr.Lista();
         System.out.println("\n"+arr.Size());
-        System.out.println(arr.Get(3));
+        System.out.println(arr.Get(4));
+        System.out.println(arr.contains(63));
     }
 }
