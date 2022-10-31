@@ -49,6 +49,7 @@ public class NicoLinkedList {
         NicoLinkedList arr = new NicoLinkedList();
         arr.add(1);
         arr.add(9);
+        arr.add(65);
         arr.add(22);
         arr.add(87);
         arr.Lista();
