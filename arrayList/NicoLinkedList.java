@@ -5,7 +5,6 @@ public class NicoLinkedList {
     Nodo root = null;
     Nodo fin = null;
     int size = 0;
-    int cont = 0;
 
     public NicoLinkedList(){
         super();
@@ -28,8 +27,14 @@ public class NicoLinkedList {
         return size;
     }
 
-    public int Get(Nodo n){
-        return n.elemento;
+    public int Get(int index){
+        int contador = 0;
+        Nodo nodo = root;
+        while(contador<index){
+            nodo = nodo.getPuntero();
+            contador++;
+        }
+        return nodo.getElemento();
     }
 
     public void Lista() {
@@ -48,6 +53,6 @@ public class NicoLinkedList {
         arr.add(87);
         arr.Lista();
         System.out.println("\n"+arr.Size());
-        System.out.println(arr.Get());
+        System.out.println(arr.Get(3));
     }
 }
