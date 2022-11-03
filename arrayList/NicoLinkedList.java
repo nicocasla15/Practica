@@ -51,12 +51,14 @@ public class NicoLinkedList {
         return a;
     }
 
-    public void Lista() {
+    public String Lista() {
+        String a = "";
         Nodo nodo = root;
         while(nodo != null){
-            System.out.print(nodo.elemento+" ");
+            a += nodo.elemento+" ";
             nodo = nodo.puntero;
         }
+        return a;
     }
 
     public static void main(String[] args){
@@ -66,8 +68,9 @@ public class NicoLinkedList {
         arr.add(63);
         arr.add(22);
         arr.add(87);
-        arr.Lista();
-        System.out.println("\n"+arr.Size());
+        arr.add(33);
+        System.out.println(arr.Lista()); 
+        System.out.println(arr.Size());
         System.out.println(arr.Get(4));
         System.out.println(arr.contains(63));
     }
