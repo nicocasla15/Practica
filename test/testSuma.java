@@ -6,9 +6,8 @@ public class testSuma extends TestCase {
     
     @Test
     public void test() {
-        Calculadora suma = new Calculadora();
-        int resultado = suma.Suma(11, 11);
-        assertEquals(22,resultado);
-        assertEquals(13, 12+1);
+        assertEquals(56,Calculadora.Suma(23, 33));
+        assertEquals(22, Calculadora.Suma(11, 11));
+        assertEquals(2, Calculadora.Suma(1,1));
     }
 }
